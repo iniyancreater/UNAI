@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #453bed;
+  --color-primary-dim: #3829e2;
+  --color-primary-container: #9695ff;
+  --color-on-primary: #f4f1ff;
+  
+  --color-secondary: #595c5e;
+  --color-secondary-container: #e0e3e5;
+  
+  --color-tertiary: #006576;
+  --color-tertiary-container: #53ddfc;
+  --color-on-tertiary-container: #004b58;
+  --color-tertiary-fixed: #53ddfc;
+  
+  --color-surface: #f3f7fb;
+  --color-surface-dim: #ced5db;
+  --color-surface-bright: #f3f7fb;
+  --color-surface-variant: #d7dee3;
+  --color-on-surface: #2a2f32;
+  --color-on-surface-variant: #575c60;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #ecf1f6;
+  --color-surface-container: #e3e9ee;
+  --color-surface-container-high: #dde3e8;
+  --color-surface-container-highest: #d7dee3;
+
+  --color-outline: #73777b;
+  --color-outline-variant: #a9aeb1;
+  
+  --shadow-glass: 0 24px 48px rgba(69, 59, 237, 0.08);
+  --shadow-signature: 0 24px 48px rgba(69, 59, 237, 0.15);
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .signature-gradient {
+    background: linear-gradient(135deg, #453bed 0%, #53ddfc 100%);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
