@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github, ArrowRight } from "lucide-react";
+import { Linkedin, Twitter, Github, Instagram, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -88,8 +88,15 @@ const Footer = () => {
             <div className="flex gap-3">
               {[
                 { Icon: Linkedin, href: "https://www.linkedin.com/in/unai-tech-2177072a0" },
-                { Icon: Twitter, href: "#" },
-                { Icon: Github, href: "#" },
+                { 
+                  Icon: () => (
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  ), 
+                  href: "https://x.com/UnaiTech74505" 
+                },
+                { Icon: Instagram, href: "https://www.instagram.com/unai.tech?igsh=MXZycG91ZzMzeGw0ZQ==" },
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
