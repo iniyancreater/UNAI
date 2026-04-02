@@ -75,16 +75,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm" style={{ fontFamily: "Poppins, sans-serif" }}>DA</span>
-              </div>
-              <span
-                className="text-lg font-bold tracking-tight"
-                style={{ fontFamily: "Poppins, sans-serif", color: "#FFFFFF" }}
-              >
-                Digital<span style={{ color: "#06B6D4" }}>Architect</span>
-              </span>
+            <Link to="/" className="flex items-center mb-5">
+              <img src="/logo.png" alt="UNAI Logo" className="h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
             </Link>
             <p
               className="text-sm leading-relaxed mb-7"
@@ -95,13 +87,15 @@ const Footer = () => {
             {/* Socials */}
             <div className="flex gap-3">
               {[
-                { Icon: Linkedin, href: "#" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/unai-tech-2177072a0" },
                 { Icon: Twitter, href: "#" },
                 { Icon: Github, href: "#" },
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
                   href={href}
+                  target={href !== "#" ? "_blank" : undefined}
+                  rel={href !== "#" ? "noopener noreferrer" : undefined}
                   className="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200"
                   style={{
                     background: "rgba(255,255,255,0.07)",
@@ -165,7 +159,7 @@ const Footer = () => {
           style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
         >
           <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.8rem" }}>
-            © {year} DigitalArchitect. All rights reserved.
+            © {year} UNAI. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             {["Terms", "Privacy", "Cookies"].map((item) => (

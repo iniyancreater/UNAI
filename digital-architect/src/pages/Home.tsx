@@ -114,13 +114,7 @@ const Hero = () => (
       >
         {/* ── Left copy ── */}
         <div className="flex flex-col justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="badge badge-white mb-6">✦ &nbsp;UNAI Consultancy Services</span>
-          </motion.div>
+
 
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
@@ -266,41 +260,6 @@ const Hero = () => (
               </p>
             </div>
           </div>
-
-          {/* Floating badges */}
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 3.2, ease: "easeInOut" }}
-            className="absolute -top-5 -left-5 glass rounded-2xl px-4 py-3"
-          >
-            <div className="flex items-center gap-2">
-              <CheckCircle size={16} style={{ color: "#06B6D4" }} />
-              <span className="text-white text-xs font-semibold" style={{ fontFamily: "Poppins,sans-serif" }}>
-                Enterprise Ready
-              </span>
-            </div>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 3.8, ease: "easeInOut", delay: 0.6 }}
-            className="absolute -bottom-5 -right-5 glass rounded-2xl px-4 py-3"
-          >
-            <div className="flex items-center gap-3">
-              <TrendingUp size={16} style={{ color: "#4F46E5" }} />
-              <div>
-                <p
-                  className="text-white text-sm font-bold leading-none"
-                  style={{ fontFamily: "Poppins,sans-serif" }}
-                >
-                  +240%
-                </p>
-                <p className="text-xs leading-none mt-1" style={{ color: "rgba(255,255,255,0.5)" }}>
-                  Avg. growth
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </div>
@@ -314,29 +273,7 @@ const Hero = () => (
 );
 
 /* ═══════════════════════ TRUSTED BY ════════════════════════════════ */
-const TrustedBy = () => (
-  <section style={{ background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
-    <div className="container-xl py-12">
-      <p
-        className="text-center text-xs font-bold uppercase tracking-widest mb-8"
-        style={{ color: "#94A3B8", fontFamily: "Poppins, sans-serif" }}
-      >
-        Trusted by industry leaders across the globe
-      </p>
-      <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
-        {["Nexus Global", "PayStream", "CloudNine", "Vertex AI", "DataForge", "SecureEdge"].map((brand) => (
-          <span
-            key={brand}
-            className="text-lg font-bold tracking-tight"
-            style={{ color: "#CBD5E1", fontFamily: "Poppins, sans-serif" }}
-          >
-            {brand}
-          </span>
-        ))}
-      </div>
-    </div>
-  </section>
-);
+
 
 /* ═══════════════════════ SERVICES PREVIEW ══════════════════════════ */
 const ServicesPreview = () => {
@@ -516,7 +453,7 @@ const Testimonials = () => {
   const items = [
     {
       quote:
-        "Digital Architect transformed our legacy platform into a modern powerhouse. Their attention to architectural detail is unparalleled.",
+        "UNAI transformed our legacy platform into a modern powerhouse. Their attention to architectural detail is unparalleled.",
       author: "Marcus Chen",
       role: "CTO, Vertex Global",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD5HjWN4Ivv9CRLNUfOPaBmv2Lvy8E4ak4B68rATf8zMRcee-QmQ4CSCsBZJX7QFQ1nc76ghpj5I5z1hXMiKosPzHGKubip4ysmCa6Kt0r-fbfcWcDfEGTo_p_rHuZNS7hGE0qRLQ2L7RltVIGQj33xkCRUiQA8X-ZzBoOM8n63mdgKpI-vwEFr-ihJeknoKXezbYZ2FsM0pt_hyve76ZuEW0jZGbFrbt6Fbad3oohQ1HNkhxS6zqVenLON0Z0isxnKfaxj8j1RmQ",
@@ -648,7 +585,6 @@ const FinalCTA = () => (
 const Home = () => (
   <main>
     <Hero />
-    <TrustedBy />
     <ServicesPreview />
     <CaseStudies />
     <Testimonials />

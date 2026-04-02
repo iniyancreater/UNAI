@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { MapPin, Clock, ArrowRight, Briefcase, Sparkles, CheckCircle } from "lucide-react";
+import { MapPin, Clock, ArrowRight, Briefcase, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const perks = [
@@ -123,7 +123,7 @@ const Careers = () => {
               className="text-3xl md:text-4xl font-bold"
               style={{ fontFamily: "Poppins, sans-serif", color: "#0F172A" }}
             >
-              Life at <span className="gradient-text">Digital Architect</span>
+              Life at <span className="gradient-text">UNAI</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -160,10 +160,7 @@ const Careers = () => {
                 Current Openings
               </h2>
             </div>
-            <div className="flex items-center gap-2 text-sm font-semibold" style={{ color: "#475569" }}>
-              <Sparkles size={15} style={{ color: "#4F46E5" }} />
-              {openings.length} roles open
-            </div>
+
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

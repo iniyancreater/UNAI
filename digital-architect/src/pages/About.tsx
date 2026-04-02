@@ -72,7 +72,7 @@ const About = () => {
             className="text-lg max-w-2xl mx-auto leading-relaxed"
             style={{ color: "rgba(255,255,255,0.6)" }}
           >
-            Digital Architect is a premium technology consultancy helping forward-thinking organizations
+            UNAI is a premium technology consultancy helping forward-thinking organizations
             build, scale, and secure their digital foundations since 2018.
           </motion.p>
         </div>
@@ -275,7 +275,7 @@ const About = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-base max-w-xl mx-auto mb-8" style={{ color: "#475569" }}>
-              Let's start a conversation about how Digital Architect can help your organization thrive in a digital-first world.
+              Let's start a conversation about how UNAI can help your organization thrive in a digital-first world.
             </p>
             <Link to="/contact">
               <button className="btn-primary">Get in Touch</button>

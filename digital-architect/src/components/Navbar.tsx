@@ -39,16 +39,14 @@ const Navbar = () => {
       >
         <nav className="container-xl flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center shadow-indigo">
-              <span className="text-white font-bold text-sm" style={{ fontFamily: "Poppins, sans-serif" }}>DA</span>
-            </div>
-            <span
-              className="text-lg font-bold text-navy tracking-tight"
-              style={{ fontFamily: "Poppins, sans-serif", color: scrolled ? "#0B0F2F" : "#FFFFFF" }}
-            >
-              Digital<span style={{ color: "#4F46E5" }}>Architect</span>
-            </span>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src="/logo.png" 
+              alt="UNAI Logo" 
+              className={`h-9 md:h-11 w-auto transition-all duration-300 group-hover:scale-105 ${
+                !scrolled && !mobileOpen ? "brightness-0 invert" : ""
+              }`}
+            />
           </Link>
 
           {/* Desktop Links */}
