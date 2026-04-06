@@ -190,7 +190,7 @@ const Hero = () => (
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, cubicBezier: [0.16, 1, 0.3, 1], delay: 0.4 }}
-          className="relative hidden lg:flex items-center justify-center p-4"
+          className="relative flex items-center justify-center p-4 mt-12 lg:mt-0"
         >
           <div
             className="relative rounded-[2rem] w-full glass p-2 overflow-hidden shadow-2xl shadow-indigo-500/10"
