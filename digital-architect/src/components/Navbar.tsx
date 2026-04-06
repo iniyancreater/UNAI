@@ -18,10 +18,22 @@ const Navbar = () => {
     setMobileOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileOpen]);
+
   const links = [
     { label: "Home", to: "/" },
     { label: "About", to: "/about" },
     { label: "Services", to: "/services" },
+    { label: "Blog", to: "/blog" },
     { label: "Careers", to: "/careers" },
     { label: "Contact", to: "/contact" },
   ];
@@ -34,7 +46,7 @@ const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "glass-light shadow-sm py-3"
-            : "bg-transparent py-6"
+            : "bg-transparent py-4"
         }`}
       >
         <nav className="container-xl flex items-center justify-between">
@@ -50,7 +62,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5">
             {links.map((link) => (
               <Link
                 key={link.to}
@@ -77,7 +89,7 @@ const Navbar = () => {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Link to="/contact">
-              <button className="btn-primary py-2.5 px-6 text-sm">Schedule Call</button>
+              <button className="btn-primary py-2.5 px-6 text-sm">Get Started</button>
             </Link>
           </div>
 

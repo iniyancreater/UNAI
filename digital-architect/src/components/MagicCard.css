@@ -1,0 +1,54 @@
+.magic-bento-card {
+  position: relative;
+  /* Instead of overriding the client's own styles, we just add the required vars for the glow */
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --glow-radius: 300px;
+}
+
+.magic-bento-card--border-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border size */
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(6, 182, 212, calc(var(--glow-intensity) * 0.8)) 0%,
+    rgba(79, 70, 229, calc(var(--glow-intensity) * 0.4)) 30%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.particle-container {
+  position: relative;
+}
+
+.magic-particle::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(6, 182, 212, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.global-spotlight {
+  will-change: transform, opacity;
+}
